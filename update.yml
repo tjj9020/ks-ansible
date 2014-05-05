@@ -1,7 +1,12 @@
 ---
-#file: tasks/updatepkg.yml
-
 - hosts: all
-  name: Update source packages on all servers
-  sudo: True
-  include: tasks/updatepkg.yml
+
+#file: roles/common/tasks/updatepkg.yml
+  tasks:
+    - name: update source packages
+      apt: update_cache=yes
+      sudo: True
+
+    - name: upgrade source packages
+      apt: upgrade=dist
+      sudo: True
