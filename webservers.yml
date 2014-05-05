@@ -1,1 +1,6 @@
+---
 #webservers file
+- hosts: websrvers
+  roles:
+    - common
+    - magento
