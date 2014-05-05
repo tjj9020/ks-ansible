@@ -1,4 +1,5 @@
 ---
 #file: site.yml
 
-- include webservers.yml
+- sudo: True
+  include webservers.yml
