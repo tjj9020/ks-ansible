@@ -1,6 +1,7 @@
 ---
 #file: tasks/updatepkg.yml
 
-- name: Update source packages on all servers
+- hosts: all
+  name: Update source packages on all servers
   sudo: True
   include tasks/updatepkg.yml
