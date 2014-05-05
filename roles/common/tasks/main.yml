@@ -2,8 +2,10 @@
 #file: roles/common/tasks/main.yml
 
 - name: make sure file2ban is installed
+  sudo: True
   apt: pkg=fail2ban state=installed
   tags: fail2ban
 
 - name: copy configuration file
+  sudo: True
   shell: cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
