@@ -1,5 +1,5 @@
 ---
 #webservers file
-- hosts: websrvers
+- hosts: all
   roles:
     - common
