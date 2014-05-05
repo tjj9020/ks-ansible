@@ -1,0 +1,12 @@
+---
+#file: roles/common/tasks/updatepkg.yml
+
+- name: update source packages
+  sudo: True
+  apt: update_cache=yes
+  tags: fail2ban
+
+- name: upgrade source packages
+  sudo: True
+  apt: upgrade=dist
+
