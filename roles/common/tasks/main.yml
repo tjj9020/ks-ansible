@@ -12,3 +12,7 @@
   notify:
     - restart fail2ban
   tags: fail2ban
+
+- name: make sure fail2ban is started
+  service: name=fail2ban state=running enabled=yes
+  tags: fail2ban

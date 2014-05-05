@@ -1,5 +1,5 @@
 ---
 
-- name: make sure fail2ban is running
-  service: name=fail2ban state=running enabled=yes
+- name: restart fail2ban
+  service: name=fail2ban state=restarted
   tags: fail2ban
