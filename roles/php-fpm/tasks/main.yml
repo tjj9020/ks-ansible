@@ -2,7 +2,7 @@
 - name: Install phpfpm and nginx
   apt: name={{ item }} state=present
   with_items:
-    - php
+    - php5
     - php-fpm
     - php-enchant
     - php-IDNA_Convert
