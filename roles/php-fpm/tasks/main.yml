@@ -1,5 +1,6 @@
 ---
 - name: Install phpfpm and nginx
+  sudo: True
   apt: name={{ item }} state=present
   with_items:
     - php5-fpm
@@ -7,3 +8,4 @@
     - php5-mcrypt
     - php5-common
     - php5-memcache
+  
